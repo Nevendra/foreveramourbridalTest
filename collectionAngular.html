@@ -298,7 +298,7 @@
 		  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,es,sp,fa,fr,hr,ko,pt,ru,tl,tr,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-80185265-1'}, 'google_translate_element');
 		}
 		</script>
-
+		<div id="top"></div>
 		<h1 ng-if="ctrl.mainHtml == true">Gown Collection</h1>
 
 		<div class="extras" ng-if="ctrl.mainHtml == true">
@@ -325,7 +325,7 @@
 
 			<div ng-if="ctrl.clickedThumbNail == true" class="selectedImage">
 				<div class="closeDesignerImageGallery">
-					<a href="" ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</a>
+					<a href="#top" ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</a>
 				</div>
 				<img src="{{ctrl.selectedImage}}">
 			</div>
@@ -333,11 +333,11 @@
 			<!-- <div ng-controller="CollectionImageGalleryController as ctrl"> -->
 				<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
 					<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
-						<a href="" ng-click="ctrl.closeDesignerImageGallery()">Close</a>
+						<a href="#top" ng-click="ctrl.closeDesignerImageGallery()">Close</a>
 					</div>
 					<div ng-repeat="images in ctrl.designerImages">
 						<div class="designerImageGallery">
-							<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img)">
+							<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img); ctrl.scrollTo('top')">
 							<p ng-bind="images.designerName"></p>
 						</div>
 					</div>
@@ -352,7 +352,7 @@
 					<div class="designerInfo designerInfoList">
 						<h3 ng-bind="designer.name"></h3>
 						<p ng-bind="designer.description"></p>
-						<a ng-click="ctrl.viewGallery(designer.name)" ng-href="#viewImagesInGallery" >View Gallery</a>
+						<a href="#top" ng-click="ctrl.viewGallery(designer.name); ctrl.scrollTo('#top')" >View Gallery</a>
 					</div>
 				</div>
 			<!-- </div> -->

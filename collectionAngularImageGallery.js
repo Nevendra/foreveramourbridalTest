@@ -3,8 +3,13 @@
 
 angular.module('CollectionImageGallery', ['DesignerService', 'ui.router'])
 
-.controller("CollectionImageGalleryController", function(DesignerListFactory) {
+.controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll) {
+
 	var self = this;
+	self.scrollTo = function(id) {
+      $location.hash(id);
+      $anchorScroll();
+   	}
 	self.imageToBeViewed = false;
 	self.designerList = new DesignerListFactory();
 	self.designerImages;
