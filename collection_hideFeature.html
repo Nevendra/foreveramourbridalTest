@@ -1,0 +1,960 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+
+<head>
+
+    <title>Gown Collection | Forever Amour Bridal Boutique</title>
+
+	<meta name="charset" content="utf-8">
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8"> 
+
+	<meta name="description" content="Large selection of designer wedding gowns at beautiful prices, as well as veils and belts to match. Justin Alexander, Rosa Clara, Symphony, Jude Jowilson and more.">
+	<meta name="keywords" content="collection, gallery, justin alexander, sposa, rosa clara, jude, jowilson, symphony">
+
+	<link rel="icon" type="image/ico" href="Images/BridalFavicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="CSS/font-awesome.css">
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+	<!--<link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">-->
+
+	<link href="CSS/prettyPhoto.css" media="screen" rel="stylesheet" type="text/css">
+
+	<!--<script src="JS/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>-->
+    
+    <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+	<script src="JS/jquery.js" type="text/javascript" charset="utf-8"></script>
+	  
+	<script src="JS/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+	<!--Google Analytics account: Forever Amour
+	Use it to track website stats. Tracking ID: UA-80185265-1
+	-->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-80185265-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<style type="text/css">
+
+		/*For collection page (to organize by designer):
+    	http://www.w3schools.com/howto/howto_js_accordion.asp
+		*/
+		h1{
+			//border: solid 1px;
+			color: #1ec5b9;
+			text-align: center;
+			margin-top: 100px;
+			margin-bottom: 0;
+		}
+        
+        #poloroidAlbum h3{
+            border-top: solid 2px #1ec5b9;
+            margin-top: 70px;
+            margin-bottom: 0;
+            padding-top: 25px;
+            text-align: center;
+        }
+        
+        #first-h3{
+            margin-top: 30px;
+        }
+        
+        p{
+            //border: solid 1px;
+            text-align: left;
+            margin-bottom: 50px;
+        }
+
+		/*the rest of the google translate dropdown styling is in style.css*/
+		#google_translate_element{
+			top: -55px;
+		}
+
+		.extras{
+			//border: solid 1px #1ec5b9;
+			border-top: solid rgb(120, 120, 120) 1px;
+			width: 40%;
+			//min-width: 432px;
+			display: inline-block;
+			vertical-align: top;
+			margin-top: 85px;
+			margin-left: 6.5%;
+			//margin-bottom: 40px;
+			padding: 20px 50px 20px 0px;
+		}
+        
+        .extras h3{
+            margin: 0;
+			color: #1ec5b9;
+		}
+
+		#poloroidAlbum{ /*section containing poloroids*/
+			//border: solid 1px black;
+			box-sizing: border-box;
+			//background-color: rgba(30, 197, 185, 0.1);
+			background-size: 100% auto;
+			width: 95%;
+			margin: 0 auto;
+			padding: 0 20px 100px 20px;
+			text-align: center;
+		}
+        
+        #poloroidAlbum p{
+            text-align: center;
+        }
+
+		.polaroid{
+		    //box-sizing: border-box;
+		    color: #666666;
+		    //border: solid rgba(0,0, 0, 0.3) 1px;
+            border: solid 1px gray;
+		    background-color: white;
+		    width: 246px;
+		    height: 360px;
+		    display: inline-block;
+		    /*poloroid gets pushed down when I add height:auto to the images with the "skinnier" classes, so overflow:hidden fixes that*/
+		    //overflow: hidden;
+		    padding-top: 10px;
+		    padding-bottom: 3px;
+		    margin-right: 25px;
+            margin-left: 25px;
+            margin-bottom: 50px;
+            text-align: center;
+		    text-decoration: none;
+		    font-style: normal;
+		    //font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		    font-size: 16px;
+		    letter-spacing: 0.8px;
+		}
+
+		.polaroid img{
+		    display: block;
+		    margin: auto;
+		    margin-bottom: 9px;
+		    height: 90%;
+            max-width: 90%;
+		    //border: solid lightgray 1px;
+		}
+
+		.polaroid:hover,
+		.polaroid:focus,
+		.polaroid:active {
+		    border-color: #22d3c2;
+            -webkit-box-shadow: 0 0 -20px rgba(34, 211, 194, 0.5);
+		    -moz-box-shadow: 0 0 -20px rgba(34, 211, 194, 0.5);
+		    box-shadow: 0 0 20px rgba(34, 211, 194, 0.5);
+            //box-shadow: 5px 5px 10px rgba(0,0, 0, 0.4);
+		}
+
+		/*.overflow:hover,
+		.overflow:focus,
+		.overflow:active {
+			/*this is a class I made for one of the polaroids which has a lot of text that goes onto the next line when bolded (on hover). But the size of the polaroid stays the same so that text gets hidden. I fix this here. I didn't do this for all of them because it makes the polaroid kinda shaky when hovered over, so I want to just apply this to that one, rather than all of them * /
+			overflow: hidden;
+			height: auto;
+		}*/
+        
+        .hideSection{
+            display: none;
+        }
+        
+        .hideButton{
+            font-weight: bold;
+            color: #1db2a3;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        /*hideButton hover state (bottom border) is defined in jquery on the bottom of the page*/
+        
+		.bottomSection{
+			background-image: url("Images/rose_transparent.png");
+			background-repeat: no-repeat;
+			background-color: rgba(30, 196, 184, 0.6);
+			background-size: auto 85%;
+			background-position: bottom left;
+			padding-left: 250px;
+		}
+
+		.bottomSection a{
+			border: solid #b31a1a 3px;
+			background-color: rgba(255, 255, 255, 0.4);
+			color: #b31a1a;
+		}
+
+		.bottomSection a:hover{
+			background-color: #b31a1a;
+			color: white;
+		}
+
+
+	</style>
+
+</head>
+
+<body>
+
+<nav>
+
+	<ul>
+		<li id="navlogo">
+			<a href="index.html" class="currentPage" title="Home">
+				Forever Amour Bridal
+			</a>
+		</li>
+		<li>
+			<a class="dropMenu" href="about.html">
+				About <i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			<ul class="dropdown" id="aboutDropdown">
+				<a href="about.html#reviewSection">
+					<li>Reviews</li>
+				</a>
+			</ul>
+		</li>
+		<li>
+			<a href="collection.html">
+				Collection
+			</a>
+		</li>
+		<li>
+			<a href="custom.html">
+				Custom <span>Made</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropMenu" href="contact.html">
+				Contact <i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			<ul class="dropdown" id="contactDropdown">
+				<li><div>
+						<strong>Phone:</strong>
+						212&nbsp;-&nbsp;486&nbsp;-&nbsp;2900
+					</div>
+					<div>
+						<strong>Email:</strong>
+                        <span><br></span>
+						<a id="mail-to" href="mailto:stylist@foreveramoubridal.com?Subject=Interested%20in%20appointment" target="_top" title="email us">stylist@foreveramoubridal.com</a>
+					</div>
+					<div>
+						<strong>Location:</strong>
+						<br>
+						1089 Second Ave.<br>
+						Suite 2<br>
+						New York, NY 10022
+						<br>
+						<a id="googleMapLink" href="https://www.google.com/maps/place/Forever+Amour+Bridal/@40.7598392,-73.9725281,15z/data=!4m5!3m4!1s0x0:0x8089fa8893732f2f!8m2!3d40.7596767!4d-73.9652754" target="_blank">
+							Find us on Google Maps <i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</div>
+					<a class="socialLink" href="https://www.theknot.com/marketplace/forever-amour-bridal-boutique-new-york-ny-546587" target="_blank">
+						<img id="knotIcon" src="Images/SocialMediaIcons/Knot_SocialIcon_transparent.png" alt="The Knot Icon" title="The Knot Wedding Network">
+					</a>
+
+					<a class="socialLink" href="https://www.facebook.com/ForeverAmourBridalDresses/" target="_blank">
+						<img id="fbIcon" src="Images/SocialMediaIcons/FB_SocialIcon_transparent.png" alt="Facebook Icon" title="Facebook">
+					</a>
+
+					<a class="socialLink" href="https://twitter.com/foreveramournyc" target="_blank">
+						<img id="twitterIcon" src="Images/SocialMediaIcons/Twitter_SocialIcon_transparent.png" alt="Twitter Icon" title="Twitter">
+					</a>
+
+					<a class="socialLink" href="https://www.pinterest.com/foreveramour/" target="_blank">
+						<img id="pinterestIcon" src="Images/SocialMediaIcons/Pinterest_SocialIcon_transparent.png" alt="Pinterest Icon" title="Pinterest">
+					</a>
+
+					<a class="socialLink" href="https://www.instagram.com/foreveramourbridalboutique/" target="_blank">
+						<img id="instagramIcon" src="Images/SocialMediaIcons/Instagram_SocialIcon_transparent.png" alt="Instagram Icon" title="Instagram">
+					</a>
+				</li>
+			</ul>
+		</li><li id="empty"></li>
+	</ul>
+    <a id="navApptlink" href="appointment.html">
+        <div>
+            Make an Appointment&nbsp;<i id="apptArrow" class="fa fa-angle-right" aria-hidden="true"></i>
+
+        </div>
+    </a>
+</nav>
+
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,es,sp,fa,fr,hr,ko,pt,ru,tl,tr,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-80185265-1'}, 'google_translate_element');
+}
+</script>
+
+<h1>Gown Collection</h1>
+
+<div class="extras">
+	<h3>Gowns and Accessories</h3>
+	<p>
+		Choose from our wide selection of dresses, with even more options available at your appointment.
+		We satisfy any bride's budget.
+		<br><br>
+		Compliment your dress with our spectacular assortment of veils and belts.
+	</p>
+</div>
+
+<div class="extras" id="alterations">	
+	<h3>Alterations</h3>
+	<p>
+		Our alterations service not only matches your dress to your body, but also allows you to customize it the way you want. Add or remove elements to make the dress you chose unique and perfect for you!
+	</p>
+</div>
+
+
+<section id="poloroidAlbum" class="notranslate">
+    
+    <h3 id="first-h3">Eddy K</h3>
+    
+    <p>Designed in Milan, the fashion capital of the world, and manufactured with the highest quality fabrics. Sophisticated couture gowns and elegant destination dresses are made with the highest attention to detail that flatters every figure, taste, and occasion.</p>
+
+	<a class="polaroid" href="Images/Collection_large/EddyK_1.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/EddyK_1.jpg" alt="Eddy K">
+    Eddy K
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/EddyK_2.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/EddyK_2.jpg" alt="Eddy K">
+    Eddy K
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/EddyK_3-cropped.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/EddyK_3-cropped.jpg" alt="Eddy K">
+    Eddy K
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/EddyK_4-cropped.png" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/EddyK_4-cropped.png" alt="Eddy K">
+    Eddy K
+    </a>
+    
+    
+    <h3>Justin Alexander</h3>
+    
+    <p>One of America's and Europe's most influential producers of wedding fashions since 1949, blending contemporary style with classic details. Gowns that create a timeless romantic look with lavish lace, memorable details, and stunning silhouettes. If you love Grace Kelly, Audrey Hepburn, or Jackie Kennedy, these designs are perfect for you.</p>
+
+	<a class="polaroid" href="Images/Collection_large/JustinAlex4.png" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/JustinAlex4.png" alt="Justin Alexander">
+    Justin Alexander
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/JA style 8846.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/JA style 8846_cropped.jpg" alt="Justin Alexander">
+    Justin Alexander
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/JustinAlex3.jpeg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/JustinAlex3.jpeg" alt="Justin Alexander">
+    Justin Alexander
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/JustinAlexander_3.png" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/JustinAlexander_3.png" alt="Justin Alexander">
+    Justin Alexander
+    </a>
+    
+    <span class = "hideSection">
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot14.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot14.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot15.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot15.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot16.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot16.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot17.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot17.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot18.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot18.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot19.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot19.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot20.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot20.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot21.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot21.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot22.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot22.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot23.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot23.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot24.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot24.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot25.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot25.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot26.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot26.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot27.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot27.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JustinAlexanderKnot28.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JustinAlexanderKnot28.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JA style 8840.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JA style 8840.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/JA style 8830.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/JA style 8830.jpg" alt="Justin Alexander">
+        Justin Alexander
+        </a>
+    
+    </span>
+    
+    <br>
+    
+    <div class="hideButton">
+        <span>Show more </span>
+        <i class="arrow fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    
+    <h3 id="first-h3">Venus</h3>
+    
+    <p>Timeless and romantic details come together to create a vast array of styles for every bride's individual beauty and unique personal charm. These gowns are in demand all around the world.</p>
+
+	<a class="polaroid rotate0" href="Images/Collection_large/Venus_5-brighter-smaller-cropped.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/Venus_5-brighter-smaller-cropped.jpg" alt="Venus">
+    Venus <!--REPLACE WITH BETTER PIC: venus dress #50024 or #AT5533X? We can't find those though-->
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/Venus_1.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/Venus_1.jpg" alt="Venus">
+    Venus
+    </a>
+	
+	<a class="polaroid" href="Images/Collection_large/Venus_2.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/Venus_2.jpg" alt="Venus">
+    Venus
+    </a>
+	
+	<a class="polaroid" href="Images/Collection_large/Venus_3.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/Venus_3.jpg" alt="Venus">
+    Venus
+    </a>
+	
+	<a class="polaroid" href="Images/Collection_large/Venus_4.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_large/Venus_4.jpg" alt="Venus">
+    Venus
+    </a>
+    
+    <h3>Jude Jowilson</h3>
+    
+    <p>Sophisticated, classic style, with a modern approach and exquisite attention to detail. Couture gowns hand-crafted in the USA, using the finest fabrics, delicate embroideries, intricate draping and dramatic silhouettes.</p>
+
+	<a class="polaroid" href="Images/Collection_large/NewJudeGowns/ELIZABETH_edited.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/NewJudeGowns/ELIZABETH_edited.jpg" alt="Jude Jowilson">
+    Jude Jowilson
+    </a>
+	
+    <a class="polaroid" href="Images/Collection_large/NewJudeGowns/ELIZABETHback_edited.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/NewJudeGowns/ELIZABETHback_edited.jpg" alt="Jude Jowilson">
+    Jude Jowilson
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/NewJudeGowns/FLORENCE_edited.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/NewJudeGowns/FLORENCE_edited.jpg" alt="Jude Jowilson">
+    Jude Jowilson
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/NewJudeGowns/FLORENCEback_edited.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/NewJudeGowns/FLORENCEback_edited.jpg" alt="Jude Jowilson">
+    Jude Jowilson
+    </a>
+    
+    <span class = "hideSection">
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/FLORENCEchantillylacedetail_edited.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/FLORENCEchantillylacedetail_edited.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/GRACE_edited.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/GRACE_edited.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/GRACEback_edited.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/GRACEback_edited.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/GRETAback_edited.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/GRETAback_edited.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/ZELDABACK.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/ZELDABACK.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/BETTE.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/BETTE.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/BETTEBACK.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/BETTEBACK.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/judes photo -215.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/judes photo -215.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/judes photo -229.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/judes photo -229.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/judes photo -252.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/judes photo -252.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/SOPHIA.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/SOPHIA.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/NewJudeGowns/ZELDA.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/NewJudeGowns/ZELDA.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/HUPX9455.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/HUPX9455.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/HUPX9531.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/HUPX9531.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/HUPX9730.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/HUPX9730.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/look4back.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/look4back.jpg" alt="Jude Jowilson">
+        Jude Jowilson
+        </a>
+    
+    </span>
+    
+    <br>
+    
+    <div class="hideButton">
+        <span>Show more </span>
+        <i class="arrow fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    
+    <h3>Rosa Clará</h3>
+    
+    <p>Starting out in Barcelona and opening one of the world's most prestigious bridalwear shows - Barecelona Bridal Week, this brand soon spread throughout Spain and the rest of the world. Today it still offers innovative designs created from the highest quality fabrics.</p>    
+    
+    <a class="polaroid rotate-1" href="Images/Collection_large/RosaClaraKnot29.jpg" rel="prettyPhoto[gallery]">
+        <img class="skinnier2" src="Images/Collection_small/RosaClaraKnot29.jpg" alt="Rosa Clara">
+    Rosa Clara
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/RosaClaraKnot30.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/RosaClaraKnot30.jpg" alt="Rosa Clara">
+    Rosa Clara
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/RosaClaraKnot31.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/RosaClaraKnot31.jpg" alt="Rosa Clara">
+    Rosa Clara
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/RosaClaraKnot32.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/RosaClaraKnot32.jpg" alt="Rosa Clara">
+    Rosa Clara
+    </a>
+    
+    <span class="hideSection">
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot33.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot33.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot34.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot34.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot35.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot35.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot36.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot36.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot37.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot37.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot38.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot38.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot39.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot39.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot40.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot40.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot41.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot41.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+
+        <a class="polaroid" href="Images/Collection_large/RosaClaraKnot42.jpg" rel="prettyPhoto[gallery]">
+            <img src="Images/Collection_small/RosaClaraKnot42.jpg" alt="Rosa Clara">
+        Rosa Clara
+        </a>
+    
+    </span>
+    
+    <br>
+    
+    <div class="hideButton">
+        <span>Show more </span>
+        <i class="arrow fa fa-angle-down" aria-hidden="true"></i>
+    </div>
+    
+    
+    <h3>More selections</h3>
+    
+    <p></p>
+    
+    <a class="polaroid" href="Images/Collection_large/glry-img2.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/glry-img2.jpg" alt="La Sposa Felicidad">
+    La Sposa Felicidad
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/San Patrick Atila.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/San Patrick Atila.jpg" alt="San Patrick Atila">
+    San Patrick Atila
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/mikaella 1656_2.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/mikaella 1656_2.jpg" alt="Mikaella">
+    Mikaella
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/White One Jaleb.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/White One Jaleb.jpg" alt="Jasmine">
+    Jasmine
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/F141013 a.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/F141013 a.jpg" alt="Jasmine">
+    Jasmine
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/Eden Bridal 5105.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/Eden Bridal 5105.jpg" alt="Eden Bridal">
+    Eden Bridal
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/casablanca bridal 2030.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/casablanca bridal 2030.jpg" alt="Casablanca Bridal">
+    Casablanca Bridal
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/AC1.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/AC1.jpg" alt="Atlas Casablanca">
+    Atlas Casablanca
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/Alfred Angelo 854.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/Alfred Angelo 854.jpg" alt="Alfred Angelo">
+    Alfred Angelo
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/AlfredAngeloCinderellaPlatinum.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/AlfredAngeloCinderellaPlatinum.jpg" alt="Alfred Angelo">
+    Alfred Angelo
+    </a>
+    
+     <a class="polaroid" href="Images/Collection_large/AlfredAngelo2119.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/AlfredAngelo2119.jpg" alt="Alfred Angelo">
+    Alfred Angelo
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/Mon Cheri 111204.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/Mon Cheri 111204.jpg" alt="Mon Cheri">
+    Mon Cheri
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/Mon Cheri 19226W.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/Mon Cheri 19226W.jpg" alt="Mon Cheri">
+    Mon Cheri
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/glry-img1.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/glry-img1.jpg" alt="La Sposa Leira">
+    La Sposa Leira
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/2013-wedding-dress-pronovias-bridal-gowns-fashion-collection-diango__full.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/2013-wedding-dress-pronovias-bridal-gowns-fashion-collection-diango__full.jpg" alt="Pronovias">
+    Pronovias
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/Odeta-1.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/Odeta-1.jpg" alt="Pronovias">
+    Pronovias
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/download.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/download.jpg" alt="Rhapsody">
+    Rhapsody
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/R6913a.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/R6913a.jpg" alt="Rhapsody">
+    Rhapsody
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/WtooByWattersVanessa15410.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/WtooByWattersVanessa15410.jpg" alt="Wtoo by Watters Vanessa">
+    <span style="font-size: 15px; letter-spacing:0px;">Wtoo by Watters Vanessa</span>
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/WattersBridalTyler6078B.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/WattersBridalTyler6078B.jpg" alt="Watters Bridal Tyler">
+    Watters Bridal Tyler
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/4214f-PALOMA.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/4214f-PALOMA.jpg" alt="Paloma Blanca">
+    Paloma Blanca
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/PalomaBlanca4356-1.png" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/PalomaBlanca4356-1.jpg" alt="Paloma Blanca">
+    Paloma Blanca
+    </a>
+
+    <a class="polaroid" href="Images/Collection_large/PalomaBlanca4413-1.png" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/PalomaBlanca4413-1.jpg" alt="Paloma Blanca">
+    Paloma Blanca
+    </a>
+    
+    <a class="polaroid" href="Images/Collection_large/AC2.jpg" rel="prettyPhoto[gallery]">
+        <img src="Images/Collection_small/AC2.jpg" alt="Lace Casa Blanca">
+    Lace Casa Blanca
+    </a>
+    
+</section>
+
+<div class="bottomSection">
+	<a class="bottomButton" href="appointment.html">
+		Make an Appointment
+	</a>
+</div>
+
+<footer>
+	<ul>
+		<li>
+			<a href="index.html">
+				Home
+			</a>
+		</li><li> <!--had to put these <li> tags on the same line or they'll have spaces between them on the site-->
+			<a href="about.html">
+				About<li>
+			<a href="about.html#reviewSection">
+				Reviews
+			</a>
+		</li><li>
+			<a href="collection.html">
+				Collection
+			</a>
+		</li><li>
+			<a href="custom.html">
+				Custom Made
+			</a>
+		</li>
+	</ul>
+
+	<div id="footer-bottom">
+		<a id="footer-appt-link" href="appointment.html">
+			<div>
+				Make an Appointment
+			</div>
+		</a>
+		<div id="footer-social">
+			<a class="socialLink" href="https://www.theknot.com/marketplace/forever-amour-bridal-boutique-new-york-ny-546587" target="_blank">
+				<img id="knotIcon" src="Images/SocialMediaIcons/Knot_SocialIcon_transparent.png" alt="The Knot Icon" title="The Knot Wedding Network">
+			</a>
+
+			<a class="socialLink" href="https://www.facebook.com/ForeverAmourBridalDresses/" target="_blank">
+				<img id="fbIcon" src="Images/SocialMediaIcons/FB_SocialIcon_transparent.png" alt="Facebook Icon" title="Facebook">
+			</a>
+
+			<a class="socialLink" href="https://twitter.com/foreveramournyc" target="_blank">
+				<img id="twitterIcon" src="Images/SocialMediaIcons/Twitter_SocialIcon_transparent.png" alt="Twitter Icon" title="Twitter">
+			</a>
+
+			<a class="socialLink" href="https://www.pinterest.com/foreveramour/" target="_blank">
+				<img id="pinterestIcon" src="Images/SocialMediaIcons/Pinterest_SocialIcon_transparent.png" alt="Pinterest Icon" title="Pinterest">
+			</a>
+
+			<a class="socialLink" href="https://www.instagram.com/foreveramourbridalboutique/" target="_blank">
+				<img id="instagramIcon" src="Images/SocialMediaIcons/Instagram_SocialIcon_transparent.png" alt="Instagram Icon" title="Instagram">
+			</a>
+		</div>
+	</div>
+
+	<div id="footer-right">
+		<div id="contact">
+			<a href="contact.html">
+				Contact
+			</a>
+		</div>
+		<div class="contactInfo">
+			<span>Phone:</span>
+			<br>
+			212 - 486 -2900
+		</div>
+		<div class="contactInfo">
+			<span>Email:</span>
+			<br>
+			stylist@foreveramourbridal.com
+		</div>
+		<div class="contactInfo">
+			<span>Location:</span>
+			<br>
+			1089 Second Ave.<br>
+			Suite 2<br>
+			New York, NY 10022
+		</div>
+
+	</div>
+
+
+</footer>
+
+
+<script type="text/javascript" charset="utf-8">
+	$(document).ready(function(){
+        $("a[rel^='prettyPhoto']").prettyPhoto();
+        /*turning off twitter and facebook buttons on the bottom of lightbox*/
+        $("a[rel^='prettyPhoto']").prettyPhoto({social_tools:false}); 
+	});
+    
+    
+    $(document).ready(function(){
+        var hideSection = $(".hideSection");
+        var toggleButton = $(".hideButton");
+    
+        toggleButton.hover(function(){
+            $(this).find(':first-child').css("border-bottom", "solid 1px");
+            }, function(){
+            $(this).find(':first-child').css("border-bottom", "none");   
+        });
+        
+        toggleButton.on("click", function(){    
+            /*
+            $(this).prevUntil('a').toggle(300);
+            $(this).prevUntil('a').css("display", "inline");
+            */
+            $(this).prevUntil('a').toggle(300).css("display", "inline");
+            
+            if($(this).is(':contains("more")')){
+                $(this).find(':first-child').text("Show less ");
+                $(this).find(':last-child').removeClass("fa-angle-down").addClass("fa-angle-up");
+                $("<br>").insertBefore($(this)); //the br disappears after clicking toggleButton so I made it appear again using jQuery
+            }
+            else{
+                $(this).find(':first-child').text("Show more ");
+                $(this).find(':last-child').removeClass("fa-angle-up").addClass("fa-angle-down");
+                $('html, body').animate({
+                    //scrollTop: $(this).prev().prev().offset().top
+                    scrollTop: $(this).prevAll('a').offset().top
+                    //scrollTop: $(this).prevAll('h3').offset().top
+                }, 300);
+            };
+        });
+        
+    });    
+    
+</script>
+
+
+
+</body>
+
+</html>

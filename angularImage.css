@@ -1,0 +1,88 @@
+.clear {
+	clear: both;
+}
+.designers {
+	text-align: center;
+	border-top: solid 1px black;
+	width: 250px;
+	margin: 0 auto;
+	border-bottom: solid 1px black;
+	margin-bottom: 40px;
+	color: #1ec5b9;
+	font-family: "Great Vibes", "Brush Script";
+	font-size: 70px;
+	padding: 20px 0px;
+
+}
+.imgGals {
+	width: 80%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #1ec5b9;
+	position: relative;
+}
+.designerInfo a {
+	text-decoration: none;
+	text-align: center;
+	position: absolute;
+	bottom: 10px;
+}
+.designerImageContainer {
+	width: 20%;
+	height: 100%;
+	margin-right: 50px;
+}
+.designerImage {
+	width: 200px;
+	height: 300px;
+	position: absolute;
+	bottom: 0px;
+}
+.designerImage img {
+	width: 100%;
+	height: 100%;
+}
+.designerInfo {
+	width: 70%;
+	text-align: center;
+	margin-left: 20px;
+}
+.designerInfoList {
+	display: inline-block;
+}
+#viewImagesInGallery {
+	width: 70%;
+	margin: 0 auto;
+}
+.designerImageGallery {
+	position: relative;
+	width: 33.33%;
+	float: left;
+}
+.designerImageGallery p {
+	position: absolute;
+	bottom: 0px;
+	left: 5px;
+	z-index: 1;
+	color: #1ec5b9;
+	font-family: "Great Vibes", "Brush Script";
+}
+.designerImageGallery img {
+	width: 100%;
+	height: 100%;
+}
+.closeDesignerImageGallery {
+    font-family: 'Playfair Display SC', serif;
+    text-align: center;
+    margin: 20px 0px;
+}
+.closeDesignerImageGallery a {
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	background-color: #e06161;
+	padding: 5px 10px;
+}
+.selectedImage {
+	text-align: center;
+}
