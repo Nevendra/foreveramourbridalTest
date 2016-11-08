@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-angular.module('CollectionImageGallery', ['DesignerService', 'ui.router'])
+angular.module('CollectionImageGallery', ['DesignerService'])
 
 .controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll) {
 
@@ -39,11 +39,6 @@ angular.module('CollectionImageGallery', ['DesignerService', 'ui.router'])
 	}
 })
 
-.config(routerConfig)
-
-function routerConfig($stateProvider, $urlRouterProvider){
-
-}
 
 
 })();
