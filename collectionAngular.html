@@ -330,34 +330,34 @@
 				<img src="{{ctrl.selectedImage}}">
 			</div>
 
-			<!-- <div ng-controller="CollectionImageGalleryController as ctrl"> -->
-				<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
-					<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
-						<a href="#top" ng-click="ctrl.closeDesignerImageGallery()">Close</a>
-					</div>
-					<div ng-repeat="images in ctrl.designerImages">
-						<div class="designerImageGallery">
-							<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img); ctrl.scrollTo('top')">
-							<p ng-bind="images.designerName"></p>
-						</div>
-					</div>
-					<div class="clear"></div>
+			<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
+				<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
+					<a href="#top" ng-click="ctrl.closeDesignerImageGallery()">Close</a>
 				</div>
+				<div ng-repeat="images in ctrl.designerImages">
+					<div class="designerImageGallery">
+						<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img); ctrl.scrollTo('top')">
+						<p ng-bind="images.designerName"></p>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="listOfDesigner">
 				<div class="imgGals" ng-repeat="designer in ctrl.designerList.designerArray" ng-if="ctrl.mainHtml == true">
 					<div class="designerImageContainer designerInfoList">
-						<div class="designerImage">
+						<!-- <div class="designerImage"> -->
 							<img ng-src="{{designer.mainImage}}">
-						</div>
+						<!-- </div> -->
 					</div>
 					<div class="designerInfo designerInfoList">
 						<h3 ng-bind="designer.name"></h3>
 						<p ng-bind="designer.description"></p>
 						<a href="#top" ng-click="ctrl.viewGallery(designer.name); ctrl.scrollTo('#top')" >View Gallery</a>
 					</div>
+					<div class="clear"></div>
+					<div class="bottomBorder"></div>
 				</div>
-			<!-- </div> -->
-
-
+			</div>
 
 		<div class="bottomSection" ng-if="ctrl.mainHtml == true">
 			<a class="bottomButton" href="appointment.html">
