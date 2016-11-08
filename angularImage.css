@@ -146,4 +146,9 @@
 	.selectedImage img {
 		width: 90%;
 	}
+	.designerImageGallery {
+		position: relative;
+		width: 50%;
+		float: left;
+	}
 }
