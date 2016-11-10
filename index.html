@@ -339,16 +339,26 @@
 				<div ng-repeat="images in ctrl.designerImages track by $index">
 					<div class="designerImageGallery">
 						<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img)">
-						<p><span ng-bind="images.designerName"></span><span ng-bind="images.number"></span></p>
+<!-- 						<p><span ng-bind="images.designerName"></span><span ng-bind="images.number"></span></p> -->
 					</div>
 				</div>
 				<div class="clear"></div>
 				<div class="imgNavContainer">
-					<div ng-click="ctrl.prevPage(ctrl.currentDesigner)" ng-if="ctrl.current_page > 1" class="imgNavButtons">Previous</div>
-					<div ng-repeat="pages in ctrl.displayPages">
-						<div ng-bind="pages.pageNumber" ng-click="ctrl.numberPageClickTo(ctrl.currentDesigner, pages.pageNumber)" class="imgNavButtons"></div>
+					<div ng-click="ctrl.prevPage(ctrl.currentDesigner)" ng-if="ctrl.current_page > 1">
+						<div class="imgNavButtons">
+							<p>Previous</p>
+						</div>
 					</div>
-					<div ng-click="ctrl.nextPage(ctrl.currentDesigner)" ng-if="ctrl.current_page < ctrl.numPages" class="imgNavButtons">Next</div>
+					<div ng-repeat="pages in ctrl.displayPages">
+						<div class="imgNavButtons">
+							<p ng-bind="pages.pageNumber" ng-click="ctrl.numberPageClickTo(ctrl.currentDesigner, pages.pageNumber)"></p>
+						</div>
+					</div>
+					<div ng-click="ctrl.nextPage(ctrl.currentDesigner)" ng-if="ctrl.current_page < ctrl.numPages">
+						<div class="imgNavButtons">
+							<p>Next</p>
+						</div>
+					</div>
 					<div class="clear"></div>
 				</div>
 			</div>
