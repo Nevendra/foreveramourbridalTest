@@ -18,7 +18,7 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	self.selectedImage;
 	self.clickedThumbNail = false;
 	self.current_page = 1;
-	self.records_per_page = 5;
+	self.records_per_page = 6;
 	self.numPages;
 	self.displayPages;
 	self.currentDesigner;
@@ -52,6 +52,7 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	self.closeDesignerImageGallerySelectedImage = function() {
 		self.clickedThumbNail = false;
 		self.imageToBeViewed = true;
+		self.scrollTo();
 	}
 	self.prevPage = function(designer) {
 		self.thisDesigner = designer;

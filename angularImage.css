@@ -102,12 +102,13 @@
     text-align: center;
     margin: 20px 0px;
 }
-.closeDesignerImageGallery a {
+.closeDesignerImageGallery p {
 	text-decoration: none;
 	font-size: 25px;
 	color: white;
 	background-color: #e06161;
 	padding: 5px 10px;
+	text-align: center;
 }
 .selectedImage {
 	text-align: center;
@@ -179,5 +180,11 @@
 		position: relative;
 		width: 50%;
 		float: left;
+	}
+	.closeDesignerImageGallery p {
+		font-size: 40px;
+	}
+	..imgNavButtons {
+		font-size: 40px;
 	}
 }
