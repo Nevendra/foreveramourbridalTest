@@ -324,14 +324,17 @@
 
 			<div ng-if="ctrl.clickedThumbNail == true" class="selectedImage">
 				<div class="closeDesignerImageGallery">
-					<a href="#top" ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</a>
+					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
 				</div>
 				<img src="{{ctrl.selectedImage}}">
+				<div class="closeDesignerImageGallery">
+					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
+				</div>
 			</div>
 
 			<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
 				<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
-					<a href="#top" ng-click="ctrl.closeDesignerImageGallery()">Close</a>
+					<p ng-click="ctrl.closeDesignerImageGallery()">Close</p>
 				</div>
 				<div ng-repeat="images in ctrl.designerImages track by $index">
 					<div class="designerImageGallery">

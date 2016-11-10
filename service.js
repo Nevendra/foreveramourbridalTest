@@ -410,7 +410,7 @@ angular.module('DesignerService', [])
 		self.designerPaginateArray = [];
 		self.designerList = new DesignerListFactory();
 		self.designerImages = self.designerList.viewDesignerGallery(designer, page);
-		self.records_per_page = 5;
+		self.records_per_page = 6;
 		for (var i = (page-1) * self.records_per_page; i < (page * self.records_per_page) && i < self.designerImages.length; i++) {
 			self.designerPaginateArray.push(self.designerImages[i]);
         	// console.log(self.designerPaginateArray);
