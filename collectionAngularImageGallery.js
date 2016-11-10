@@ -3,7 +3,7 @@
 
 angular.module('CollectionImageGallery', ['DesignerService'])
 
-.controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll) {
+.controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll, PaginateDesigner) {
 
 	var self = this;
 	self.scrollTo = function(id) {
@@ -12,21 +12,37 @@ angular.module('CollectionImageGallery', ['DesignerService'])
    	}
 	self.imageToBeViewed = false;
 	self.designerList = new DesignerListFactory();
+	self.designerFullImages;
 	self.designerImages;
 	self.mainHtml = true;
 	self.selectedImage;
-	self.clickedThumbNail = false
-	self.viewGallery = function(designer) {
-		self.designerImages = self.designerList.viewDesignerGallery(designer);
-		console.log(self.designerImages);
+	self.clickedThumbNail = false;
+	self.current_page = 1;
+	self.records_per_page = 5;
+	self.numPages;
+	self.displayPages;
+	self.currentDesigner;
+	self.viewGallery = function(designer, page) {
+		self.designerFullImages = self.designerList.viewDesignerGallery(designer);
+		self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, page);
+		self.paged = page;
+		self.currentDesigner = designer;
+		self.numPages = Math.ceil(self.designerFullImages.length / self.records_per_page);
+		// console.log(self.designerImages);
 		self.imageToBeViewed = true;
 		self.mainHtml = false;
+		self.displayPages = PaginateDesigner.PagesToBedisplayed(self.numPages);
+		console.log(self.displayPages);
+		self.scrollTo();
 
 	};
 	self.closeDesignerImageGallery = function() {
 		self.mainHtml = true;
 		self.imageToBeViewed = false;
 		self.clickedThumbNail = false
+		self.current_page = 1;
+		self.designerFullImages;
+		self.numPages;
 	};
 	self.viewLargeImage = function(image) {
 		self.selectedImage = image;
@@ -36,6 +52,30 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	self.closeDesignerImageGallerySelectedImage = function() {
 		self.clickedThumbNail = false;
 		self.imageToBeViewed = true;
+	}
+	self.prevPage = function(designer) {
+		self.thisDesigner = designer;
+	    if (self.current_page > 1) {
+	        self.current_page--;
+	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
+	        self.scrollTo();
+	    }
+	}
+	self.nextPage = function(designer) {
+		self.thisDesigner = designer;
+    	// self.numPages = Math.ceil(self.designerFullImages.length / self.records_per_page);
+    	// console.log(self.designerFullImages.length);
+
+	    if (self.current_page < self.numPages) {
+	        self.current_page++;
+	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
+	        self.scrollTo();
+	    }
+	}
+	self.numberPageClickTo = function(designer, number) {
+		self.current_page = number;
+		self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
+		self.scrollTo();
 	}
 })
 

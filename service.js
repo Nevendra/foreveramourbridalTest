@@ -11,45 +11,71 @@ angular.module('DesignerService', [])
 				description: "Designed in Milan, the fashion capital of the world, and manufactured with the highest quality fabrics. Sophisticated couture gowns and elegant destination dresses are made with the highest attention to detail that flatters every figure, taste, and occasion.",
 				mainImage: "Images/BETTE.jpg",
 				gallery: [
+
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "1",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "2",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
-					},
-					{
-						img: "Images/BETTE.jpg",
-						designerName: "Eddie k",
+						number: "3",
 					},					
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "4",
 					},					
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "5",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "6",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "7",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "8",
 					},
 					{
 						img: "Images/BETTE.jpg",
 						designerName: "Eddie k",
+						number: "9",
+					},
+										{
+						img: "Images/BETTE.jpg",
+						designerName: "Eddie k",
+						number: "10",
+					},
+					{
+						img: "Images/BETTE.jpg",
+						designerName: "Eddie k",
+						number: "11",
+					},
+					{
+						img: "Images/BETTE.jpg",
+						designerName: "Eddie k",
+						number: "12",
+					},
+										{
+						img: "Images/BETTE.jpg",
+						designerName: "Eddie k",
+						number: "13",
 					},
 				]
 
@@ -59,46 +85,53 @@ angular.module('DesignerService', [])
 				description: "One of America's and Europe's most influential producers of wedding fashions since 1949, blending contemporary style with classic details. Gowns that create a timeless romantic look with lavish lace, memorable details, and stunning silhouettes. If you love Grace Kelly, Audrey Hepburn, or Jackie Kennedy, these designs are perfect for you.",
 				mainImage: "Images/JustinAlex3.jpeg",
 				gallery: [
+
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "1",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "2",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "3",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "4",
 					},					
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "5",
 					},					
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "6",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "7",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "8",
 					},
 					{
 						img: "Images/JustinAlex3.jpeg",
 						designerName: "Justin Alexander",
+						number: "9",
 					},
-					{
-						img: "Images/JustinAlex3.jpeg",
-						designerName: "Justin Alexander",
-					},
+
 				]
 
 
@@ -111,42 +144,53 @@ angular.module('DesignerService', [])
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "1",
+
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "2",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "3",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "4",
 					},					
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "5",
 					},					
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "6",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "7",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "8",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "9",
 					},
 					{
 						img: "Images/MaggieSotteroS5301.jpg",
 						designerName: "Venus",
+						number: "10",
 					},
 				]
 
@@ -160,42 +204,102 @@ angular.module('DesignerService', [])
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "1",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "2",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "3",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "4",
 					},					
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "5",
 					},					
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "6",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "7",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "8",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "9",
 					},
 					{
 						img: "Images/FLORENCE_edited.jpg",
 						designerName: "Jude Jowilson",
+						number: "10",
+					},
+										{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "11",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "12",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "13",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "14",
+					},					
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "15",
+					},					
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "16",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "17",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "18",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "19",
+					},
+					{
+						img: "Images/FLORENCE_edited.jpg",
+						designerName: "Jude Jowilson",
+						number: "20",
 					},
 				]
 
@@ -218,34 +322,6 @@ angular.module('DesignerService', [])
 						img: "Images/GRACE_edited.jpg",
 						designerName: "Rosa Clará",
 					},
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},					
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},					
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},
-					{
-						img: "Images/GRACE_edited.jpg",
-						designerName: "Rosa Clará",
-					},
 				]
 
 
@@ -255,45 +331,56 @@ angular.module('DesignerService', [])
 				description: "Nicole Spose has collections that speak of a fresh and young fashion, that dictate trends, while maintaining quality and tailoring. Exclusively at our salon in New York City",
 				mainImage: "Images/ELIZABETH_edited.jpg",
 				gallery: [
+
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "1",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "2",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "3",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "4",
 					},					
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "5",
 					},					
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "6",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "7",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "8",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "9",
 					},
 					{
 						img: "Images/ELIZABETH_edited.jpg",
 						designerName: "Nicole Spose",
+						number: "10",
 					},
 				]
 
@@ -316,6 +403,34 @@ angular.module('DesignerService', [])
 
 	return DesignerListFactory;
 })//// ends designerlistfactory
+
+.service('PaginateDesigner', function(DesignerListFactory){
+	var self = this;
+	self.PaginateDesignerFunction = function(designer, page){
+		self.designerPaginateArray = [];
+		self.designerList = new DesignerListFactory();
+		self.designerImages = self.designerList.viewDesignerGallery(designer, page);
+		self.records_per_page = 5;
+		for (var i = (page-1) * self.records_per_page; i < (page * self.records_per_page) && i < self.designerImages.length; i++) {
+			self.designerPaginateArray.push(self.designerImages[i]);
+        	// console.log(self.designerPaginateArray);
+    	}
+  		return self.designerPaginateArray;
+	}
+	self.PagesToBedisplayed = function(pages) {
+		self.pagesArray = [];
+		for(var i = 1; i <= pages; i++) {
+			self.numPages =
+				{
+					pageNumber: i,
+				};
+			self.pagesArray.push(self.numPages);
+		}
+		return self.pagesArray;
+	}
+
+
+})
 
 })();
 
