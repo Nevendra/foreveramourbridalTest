@@ -127,6 +127,7 @@
 	float: left;
 	margin: 5px;
 	height: 40px;
+	margin-bottom: 20px;
 }
 .imgNavButtons p {
 	font-size: 30px;
@@ -140,7 +141,6 @@
 /*	position: absolute;
 	left: 50%;
 	transform: translate(-10%, 0);*/
-	margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -183,10 +183,10 @@
 		width: 50%;
 		float: left;
 	}
-/*	.closeDesignerImageGallery p {
+	.closeDesignerImageGallery p {
 		font-size: 60px;
 	}
 	.imgNavButtons p {
 		font-size: 60px;
-	}*/
+	}
 }
