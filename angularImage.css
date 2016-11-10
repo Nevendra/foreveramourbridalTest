@@ -185,8 +185,19 @@
 	}
 	.closeDesignerImageGallery p {
 		font-size: 60px;
+		padding: 20px 20px;
 	}
 	.imgNavButtons p {
 		font-size: 60px;
+		padding: 20px 20px;
+		margin: 5px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	.imgNavContainer {
+		width: 60%;
+	}
+	.imgNavButtons {
+		height: 60px;
 	}
 }
