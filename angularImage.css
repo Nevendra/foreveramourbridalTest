@@ -1,6 +1,9 @@
 .clear {
 	clear: both;
 }
+.float {
+	float: left;
+}
 .designers {
 	text-align: center;
 	border-top: solid 1px black;
@@ -68,6 +71,7 @@
 #viewImagesInGallery {
 	width: 70%;
 	margin: 0 auto;
+	margin-bottom: 20px;
 }
 .designerImageGallery {
 	position: relative;
@@ -124,7 +128,7 @@
 	margin: 0 auto;
 }
 .imgNavButtons {
-	float: left;
+	/*float: left;*/
 	margin: 5px;
 	height: 40px;
 	margin-bottom: 20px;
@@ -134,6 +138,8 @@
 	padding: 5px 10px;
 	color: white;
 	background-color: #1ec5b9;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
 .imgNavContainer {
 	width: 40%;
@@ -142,6 +148,10 @@
 	left: 50%;
 	transform: translate(-10%, 0);*/
 }
+.nextEnd {
+	margin-bottom: 30px;
+}
+
 
 @media screen and (max-width: 1000px) {
   	.designerInfoList {
@@ -199,5 +209,11 @@
 	}
 	.imgNavButtons {
 		height: 60px;
+	}
+	.designerInfo a {
+		font-size: 30px;
+	}
+	#viewImagesInGallery {
+		margin-bottom: 40px;
 	}
 }

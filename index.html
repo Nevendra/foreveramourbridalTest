@@ -350,16 +350,16 @@
 						</div>
 					</div>
 					<div ng-repeat="pages in ctrl.displayPages">
-						<div class="imgNavButtons">
+						<div class="imgNavButtons float">
 							<p ng-bind="pages.pageNumber" ng-click="ctrl.numberPageClickTo(ctrl.currentDesigner, pages.pageNumber)"></p>
 						</div>
 					</div>
+					<div class="clear"></div>
 					<div ng-click="ctrl.nextPage(ctrl.currentDesigner)" ng-if="ctrl.current_page < ctrl.numPages">
-						<div class="imgNavButtons">
+						<div class="imgNavButtons nextEnd" >
 							<p>Next</p>
 						</div>
 					</div>
-					<div class="clear"></div>
 				</div>
 			</div>
 			<div class="listOfDesigner">
