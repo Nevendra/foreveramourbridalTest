@@ -148,9 +148,6 @@
 	left: 50%;
 	transform: translate(-10%, 0);*/
 }
-.nextEnd {
-	margin-bottom: 30px;
-}
 
 
 @media screen and (max-width: 1000px) {
@@ -214,6 +211,9 @@
 		font-size: 30px;
 	}
 	#viewImagesInGallery {
-		margin-bottom: 40px;
+		margin-bottom: 60px;
+	}
+	.nextEnd p {
+		margin-top: 50px;
 	}
 }
