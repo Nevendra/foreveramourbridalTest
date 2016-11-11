@@ -129,7 +129,7 @@
 }
 .imgNavButtons {
 	/*float: left;*/
-	margin: 5px;
+	margin: 10px;
 	height: 40px;
 	margin-bottom: 20px;
 }
@@ -147,9 +147,6 @@
 /*	position: absolute;
 	left: 50%;
 	transform: translate(-10%, 0);*/
-}
-.nextEnd {
-	margin-bottom: 30px;
 }
 
 
@@ -200,12 +197,12 @@
 	.imgNavButtons p {
 		font-size: 60px;
 		padding: 20px 20px;
-		margin: 5px;
+		margin: 10px;
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
 	.imgNavContainer {
-		width: 60%;
+		width: 70%;
 	}
 	.imgNavButtons {
 		height: 60px;
@@ -214,6 +211,9 @@
 		font-size: 30px;
 	}
 	#viewImagesInGallery {
-		margin-bottom: 40px;
+		margin-bottom: 60px;
+	}
+	.nextEnd p {
+		margin-top: 50px;
 	}
 }
