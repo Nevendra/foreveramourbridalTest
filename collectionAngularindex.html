@@ -40,8 +40,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
 
 	<!-- <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script> -->
-	<script type="text/javascript" src="service.js"></script>
-    <script rel="stylesheet" type="text/javascript" src="collectionAngularImageGallery.js"></script>
+	<script type="text/javascript" src="JS/service.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="JS/collectionAngularImageGallery.js"></script>
 
 	<!--Google Analytics account: Forever Amour
 	Use it to track website stats. Tracking ID: UA-86456732-1
@@ -81,7 +81,7 @@
             margin-top: 30px;
         }
         
-        p{
+        .text p{
             //border: solid 1px;
             text-align: left;
             margin-bottom: 50px;
@@ -202,7 +202,7 @@
 
 
 	</style>
-	<link href="angularImage.css" rel="stylesheet" type="text/css">
+	<link href="CSS/angularImage.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -300,7 +300,7 @@
 		<div id="top"></div>
 		<h1 ng-if="ctrl.mainHtml == true">Gown Collection</h1>
 
-		<div class="extras" ng-if="ctrl.mainHtml == true">
+		<div class="extras text" ng-if="ctrl.mainHtml == true">
 			<h3>Gowns and Accessories</h3>
 			<p>
 				Choose from our wide selection of dresses, with even more options available at your appointment.
@@ -310,7 +310,7 @@
 			</p>
 		</div>
 
-		<div class="extras" id="alterations" ng-if="ctrl.mainHtml == true">	
+		<div class="extras text" id="alterations" ng-if="ctrl.mainHtml == true">	
 			<h3>Alterations</h3>
 			<p>
 				Our alterations service not only matches your dress to your body, but also allows you to customize it the way you want. Add or remove elements to make the dress you chose unique and perfect for you!
@@ -326,7 +326,7 @@
 				<div class="closeDesignerImageGallery">
 					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
 				</div>
-				<img src="{{ctrl.selectedImage}}">
+				<img ng-src="{{ctrl.selectedImage}}">
 				<div class="closeDesignerImageGallery">
 					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
 				</div>
@@ -336,13 +336,14 @@
 				<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
 					<p ng-click="ctrl.closeDesignerImageGallery()">Close</p>
 				</div>
-				<div ng-repeat="images in ctrl.designerImages track by $index">
-					<div class="designerImageGallery">
+				<div ng-repeat="images in ctrl.designerImages track by $index" class="designerImageGallery">
+						<p ng-bind="images.designerName"></p>
 						<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img)">
-						<p><span ng-bind="images.designerName"></span><span ng-bind="images.number"></span></p>
-					</div>
 				</div>
 				<div class="clear"></div>
+				<div>
+					<p>Current Page: <span ng-bind="ctrl.current_page"></span><span>/</span><span ng-bind="ctrl.numPages"></span></p>
+				</div>
 				<div class="imgNavContainer">
 					<div ng-click="ctrl.prevPage(ctrl.currentDesigner)" ng-if="ctrl.current_page > 1">
 						<div class="imgNavButtons">
@@ -369,7 +370,7 @@
 							<img ng-src="{{designer.mainImage}}">
 						<!-- </div> -->
 					</div>
-					<div class="designerInfo designerInfoList">
+					<div class="designerInfo designerInfoList text">
 						<h3 ng-bind="designer.name"></h3>
 						<p ng-bind="designer.description"></p>
 						<a href="#top" ng-click="ctrl.viewGallery(designer.name, ctrl.current_page)" >View Gallery</a>
