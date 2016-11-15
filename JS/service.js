@@ -395,26 +395,6 @@ angular.module('DesignerService', [])
 						img: "Images/Collection_large/nicole-spose-NIAB17134-Nicole-moda-sposa-2017-264.jpg",
 						designerName: "",
 					},					
-					{
-						img: "Images/ELIZABETH_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/ELIZABETH_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/ELIZABETH_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/ELIZABETH_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/ELIZABETH_edited.jpg",
-						designerName: "",
-					},
 				]
 			},
 			{

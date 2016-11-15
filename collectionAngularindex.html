@@ -341,6 +341,7 @@
 						<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img)">
 				</div>
 				<div class="clear"></div>
+
 				<div>
 					<p>Current Page: <span ng-bind="ctrl.current_page"></span><span>/</span><span ng-bind="ctrl.numPages"></span></p>
 				</div>
@@ -362,6 +363,7 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
 			<div class="listOfDesigner">
 				<div class="imgGals" ng-repeat="designer in ctrl.designerList.designerArray" ng-if="ctrl.mainHtml == true">

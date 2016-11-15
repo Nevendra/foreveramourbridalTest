@@ -52,6 +52,7 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 		self.imageToBeViewed = true;
 		self.scrollTo();
 	}
+
 	self.prevPage = function(designer) {
 		self.thisDesigner = designer;
 	    if (self.current_page > 1) {
@@ -60,6 +61,7 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	        self.scrollTo();
 	    }
 	}
+
 	self.nextPage = function(designer) {
 		self.thisDesigner = designer;
 	    if (self.current_page < self.numPages) {
@@ -68,6 +70,7 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	        self.scrollTo();
 	    }
 	}
+
 	self.numberPageClickTo = function(designer, number) {
 		self.current_page = number;
 		self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
