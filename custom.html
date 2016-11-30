@@ -1,0 +1,533 @@
+<!DOCTYPE html><!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+
+<head>
+	<title>Custom Gowns | Forever Amour Bridal Boutique</title>
+
+	<meta name="charset" content="utf-8">
+	<meta http-equiv="content-Type" content="text/html; charset=utf-8"> 
+
+	<meta name="description" content="Your dream dress created here, a handcrafted wedding gown custom-made only for you by renowned designer Jude Jowilson.">
+	<meta name="keywords" content="custom, couture, designer, gown, dress, hand made, handcrafted, design, jude, jowilson">
+
+	<link rel="icon" type="image/ico" href="Images/BridalFavicon.ico">
+
+	<link rel="stylesheet" type="text/css" href="CSS/font-awesome.css">
+
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+
+
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Great+Vibes' rel='stylesheet' type='text/css'>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+	<script type="text/javascript" src="JS/service.js"></script>
+    <script rel="stylesheet" type="text/javascript" src="JS/collectionAngularImageGallery.js"></script>
+
+	<!--Google Analytics account: Forever Amour
+	Use it to track website stats. Tracking ID: UA-86456732-1
+	-->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-86456732-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+
+	<style>
+
+		/*the rest of the google translate dropdown styling is in style.css*/
+		#google_translate_element{
+			top: 10px;
+		}		
+
+		#banner{
+			//border: solid red;
+			background-image: url("Images/Sketches banner_teal.jpg");
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: relative;
+			width: 100%;
+			height: 0;
+			padding-top: 20.617%;
+			margin-top: 32px;
+		}
+
+		#h1-container{
+			//border: solid 1px;
+			position: absolute;
+			display: table;
+			top: 0;
+			width: 100%;
+			//top: -20.617%;
+			height: 100%;
+		}
+
+		#banner h1{
+			//border: solid red 1px;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+			color: rgb(71, 71, 71);
+		}
+
+		.row{
+			//border: solid yellow 1px;
+			width: 100%;
+		}
+
+		.row .col{
+			//border: solid brown 1px;
+			display: inline-block;
+			width: 50%;
+			float: left;
+		}
+
+		.row .col img{
+			width: 100%;
+			display: block;
+		}
+
+		.row .col h2{ /*more general h2 css styles specifiied in style.css*/
+			//border-style: solid;
+			text-align: center;
+			color: #1ec5b9;
+			margin-top: 50%;
+		}
+
+		.row .col p{
+			//border: solid white 1px;
+			width: 55%;
+			margin-left: 5%;
+		}
+
+		#color-background{
+			//border: solid red 1px;
+			background-color: #1ec5b9;
+			overflow: hidden; /*need this because the float takes away the background color. weird!*/
+			position: relative;
+		}
+
+		#paragraph-container{
+			//border: solid black 1px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		#paragraph-container p{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		#aboutJude_container{
+			//border: solid black 1px;
+		}
+
+		#aboutJude_container #aboutJude{
+			//border-top: solid #1ec5b9 2px;
+			border-top: solid #1ec5b9 1px;
+			width: 90%;
+			max-width: 700px;
+			margin: 150px auto 150px;
+			padding-top: 15px;
+			height: auto;
+			overflow: hidden;
+			//position: relative;
+		}
+
+		#aboutJude_container #aboutJude h3{
+			//border: solid gold 1px;
+			margin: 0;
+			display: inline-block;
+			color: #1ec5b9;
+		}
+
+		#aboutJude_container #aboutJude img{
+			float: right;
+			margin-left: 20px;
+		}
+
+		#aboutJude_container #aboutJude p{
+			//border: solid green 1px;
+			//text-align: justify;
+			margin-bottom: 30px;
+		}
+
+		#firstcharacter{
+			float: left;
+			font-size: 35px;
+			line-height: 35px;
+			padding-top: 4px;
+			padding-right: 8px;
+			padding-left: 3px;
+			font-family: "Great Vibes", "Brush Script";
+		}
+
+		#judeWorkLink{
+			border: solid 2px #1ec5b9;
+			border-radius: 8px;
+			background-color: #1ec5b9;
+			color: white;
+			padding: 5px 25px 5px 25px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			text-decoration: none;
+			display: inline-block;
+			//position: absolute;
+			//bottom: 0;
+			transition: 0.3s;
+		}
+
+		#judeWorkLink:hover{
+			background-color: #1db2a3;
+			border: solid 2px #1db2a3;
+			transition: 0.3s;
+		}
+
+		/*#judeWorkLink{
+			border: solid 2px #1ec5b9;
+			border-radius: 8px;
+			background-color: white;
+			color: #1ec5b9;
+			padding: 3px 25px 3px 25px;
+			text-align: center;
+			font-weight: bold;
+			font-size: 20px;
+			text-decoration: none;
+			display: inline-block;
+			//position: absolute;
+			//bottom: 0;
+			transition: 0.3s;
+		}
+
+		#judeWorkLink:hover{
+			background-color: #1db2a3;
+			border: solid 2px #1db2a3;
+			color: white;
+			transition: 0.3s;
+		}*/
+
+		.judeLink{
+			//border: solid black 1px;
+			color: #1db2a3;
+			font-size: 18px;
+			font-weight: bold;
+			text-decoration: none;
+			border-bottom: solid white 1px;
+			display: inline-block;
+			margin-bottom: 20px;
+		}
+
+		.judeLink:hover{
+			border-bottom: solid 1px;
+		}
+
+		.bottomSection{
+			background-image: url("Images/JudeBottomImg_FourthSize_Cropped.jpg");
+			background-position: top;
+		}
+
+		.bottomSection a{
+			border: solid rgb(71, 71, 71) 3px;
+			background-color: rgba(255, 255, 255, 0.6);
+			color: rgb(71, 71, 71);
+		}
+
+		.bottomSection a:hover{
+			background-color: rgb(71, 71, 71);
+			color: white;
+		}
+
+	</style>
+	<link href="CSS/angularImage.css" rel="stylesheet" type="text/css">
+
+
+</head>
+
+<body ng-app="CollectionImageGallery" ng-controller="CollectionImageGalleryController as ctrl">
+
+	<div ng-if="ctrl.clickedThumbNail == true" class="selectedImage">
+		<div class="closeDesignerImageGallery">
+			<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">X</p>
+		</div>
+		<img ng-src="{{ctrl.selectedImage}}">
+		<div class="closeDesignerImageGallery">
+			<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">X</p>
+		</div>
+	</div>
+
+	<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
+		<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
+			<p ng-click="ctrl.closeDesignerImageGallery()">X</p>
+		</div>
+		<div ng-repeat="images in ctrl.designerImages track by $index" class="designerImageGallery">
+				<p ng-bind="images.designerName"></p>
+				<img ng-src="{{images.img}}" ng-click="ctrl.viewLargeImage(images.img)">
+		</div>
+		<div class="clear"></div>
+
+		<div>
+			<p>Current Page: <span ng-bind="ctrl.current_page"></span><span>/</span><span ng-bind="ctrl.numPages"></span><span ng-click="ctrl.prevPage(ctrl.currentDesigner, ctrl.justJude)" ng-if="ctrl.current_page > 1"> : < Previous </span><span ng-click="ctrl.nextPage(ctrl.currentDesigner, ctrl.justJude)" ng-if="ctrl.current_page < ctrl.numPages"> : Next > </span></p>
+		</div>
+	</div>
+
+<nav ng-if="ctrl.mainHtml == true">
+
+	<ul>
+		<li id="navlogo">
+			<a href="index.html" class="currentPage" title="Home">
+				Forever Amour Bridal
+			</a>
+		</li>
+		<li>
+			<a class="dropMenu" href="about.html">
+				About <i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			<ul class="dropdown" id="aboutDropdown">
+				<a href="about.html#reviewSection">
+					<li>Reviews</li>
+				</a>
+			</ul>
+		</li>
+		<li>
+			<a href="collection.html">
+				Collection
+			</a>
+		</li>
+		<li>
+			<a href="custom.html">
+				Custom <span>Made</span>
+			</a>
+		</li>
+		<li>
+			<a class="dropMenu" href="contact.html">
+				Contact <i class="fa fa-angle-down" aria-hidden="true"></i>
+			</a>
+			<ul class="dropdown" id="contactDropdown">
+				<li><div>
+						<strong>Phone:</strong>
+						212&nbsp;-&nbsp;486&nbsp;-&nbsp;2900
+					</div>
+					<div>
+						<strong>Email:</strong>
+                        <span><br></span>
+						<a id="mail-to" href="mailto:stylist@foreveramourbridal.com?Subject=Interested%20in%20appointment" target="_top" title="email us">stylist@foreveramourbridal.com</a>
+					</div>
+					<div>
+						<strong>Location:</strong>
+						<br>
+						1089 Second Ave.<br>
+						Suite 2<br>
+						New York, NY 10022
+						<br>
+						<a id="googleMapLink" href="https://www.google.com/maps/place/Forever+Amour+Bridal/@40.7598392,-73.9725281,15z/data=!4m5!3m4!1s0x0:0x8089fa8893732f2f!8m2!3d40.7596767!4d-73.9652754" target="_blank">
+							Find us on Google Maps <i class="fa fa-angle-right" aria-hidden="true"></i>
+						</a>
+					</div>
+					<a class="socialLink" href="https://www.theknot.com/marketplace/forever-amour-bridal-boutique-new-york-ny-546587" target="_blank">
+						<img id="knotIcon" src="Images/SocialMediaIcons/Knot_SocialIcon_transparent.png" alt="The Knot Icon" title="The Knot Wedding Network">
+					</a>
+
+					<a class="socialLink" href="https://www.facebook.com/ForeverAmourBridalDresses/" target="_blank">
+						<img id="fbIcon" src="Images/SocialMediaIcons/FB_SocialIcon_transparent.png" alt="Facebook Icon" title="Facebook">
+					</a>
+
+					<a class="socialLink" href="https://twitter.com/foreveramournyc" target="_blank">
+						<img id="twitterIcon" src="Images/SocialMediaIcons/Twitter_SocialIcon_transparent.png" alt="Twitter Icon" title="Twitter">
+					</a>
+
+					<a class="socialLink" href="https://www.pinterest.com/foreveramour/" target="_blank">
+						<img id="pinterestIcon" src="Images/SocialMediaIcons/Pinterest_SocialIcon_transparent.png" alt="Pinterest Icon" title="Pinterest">
+					</a>
+
+					<a class="socialLink" href="https://www.instagram.com/foreveramourbridalboutique/" target="_blank">
+						<img id="instagramIcon" src="Images/SocialMediaIcons/Instagram_SocialIcon_transparent.png" alt="Instagram Icon" title="Instagram">
+					</a>
+				</li>
+			</ul>
+            <li><a href="guideIndex.html">Our Guide To Shop</a></li>
+		</li><li id="empty"></li>
+	</ul>
+    <a id="navApptlink" href="appointment.html">
+        <div>
+            Make an Appointment&nbsp;<i id="apptArrow" class="fa fa-angle-right" aria-hidden="true"></i>
+
+        </div>
+    </a>
+</nav>
+
+<div id="google_translate_element"></div><script type="text/javascript" ng-if="ctrl.mainHtml == true">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,fa,fr,hr,ko,pt,ru,es,tl,tr,zh-CN', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-80185265-1'}, 'google_translate_element');
+}
+</script><script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<div id="banner" ng-if="ctrl.mainHtml == true">
+	<div id="h1-container">
+		<h1>Custom Made</h1>
+	</div>
+</div>
+
+<div class="row" ng-if="ctrl.mainHtml == true">
+	<div class="col">
+		<h2>A custom-created<br>wedding gown<br>for you...</h2>
+	</div>
+
+	<div class="col">
+		<img src="Images/OnlinePic.jpg">
+	</div>
+</div>
+
+<div class="row" id="color-background" ng-if="ctrl.mainHtml == true">
+	<div class="col">
+		<img src="Images/InviteImage_ThirdSize_cropped.jpg">
+	</div>
+	<div class="col" id="paragraph-container">
+		<p>
+			Jude Jowilson, our exclusive bridal designer offers custom wedding dresses at attainable prices.
+		</P>
+		<p>
+			From the first sketch to the last fitting, Jude will collaborate with you to create a unique handcrafted gown that is yours alone.
+		</p>
+		<p>
+			Forever Amour Bridal Boutique, unlike most bridal salons, offers this couture experience.
+		</p>
+	</div>
+</div>
+
+
+<div id="aboutJude_container" ng-if="ctrl.mainHtml == true">
+	<div id="aboutJude">
+		
+		<h3>About Jude Jowilson</h3>
+
+		<img src="Images/jude.png">
+
+		<p>
+			<span id="firstcharacter">J</span>ude brings over 10 years of design experience along with a passion for understanding for brides' wants and needs. Inspired by his grandmother, a skilled home-based seamstress, he developed an interest in fashion at an early age. He continues to be inspired at Parsons The New School for Design.
+		</p>
+		<p>
+			Jude has joined Forever Amour Bridal Boutique as our exclusive in-house couture designer and has launched his own bridal collection under the Jude Jowilson brand.
+		</p>
+		
+		<!--<a id="judeWorkLink" href="http://www.judejowilson.com/lookbook.html" target="_blank">
+			<div id="judeWork">
+				View Jude's Work
+			</div>
+		</a>
+
+		<br>-->
+		<div ng-click="ctrl.viewGallery(designer.name, ctrl.current_page, ctrl.justJude)">
+			<a class="judeLink" href="#">
+				View Jude Jowilson Dress Gallery <i class="fa fa-angle-right" aria-hidden="true"></i>
+			</a>
+		</div>
+
+		<a class="judeLink" href="http://noveltybride.com/blog/jude-jowilson/" target="_blank">
+			Read more about Jude Jowilson <i class="fa fa-angle-right" aria-hidden="true"></i>
+		</a>
+
+		<br>
+		
+		<a class="judeLink" href="http://www.yourweddingtuscany.com/from-the-new-york-international-bridal-week-an-interview-with-jude-jowilson/#.VzEf4NHPs-4.facebook" target="_blank">
+			Jude at Bridal Week <i class="fa fa-angle-right" aria-hidden="true"></i>
+		</a>
+	</div>
+</div>
+
+
+<div class="bottomSection" ng-if="ctrl.mainHtml == true">
+	<a class="bottomButton" href="appointment.html">
+		Make an Appointment
+	</a>
+</div>
+
+<footer ng-if="ctrl.mainHtml == true">
+	<ul>
+		<li>
+			<a href="index.html">
+				Home
+			</a>
+		</li><li> <!--had to put these <li> tags on the same line or they'll have spaces between them on the site-->
+			<a href="about.html">
+				About<li>
+			<a href="about.html#reviewSection">
+				Reviews
+			</a>
+		</li><li>
+			<a href="collection.html">
+				Collection
+			</a>
+		</li><li>
+			<a href="custom.html">
+				Custom Made
+			</a>
+		</li>
+	</ul>
+
+	<div id="footer-bottom">
+		<a id="footer-appt-link" href="appointment.html">
+			<div>
+				Make an Appointment
+			</div>
+		</a>
+		<div id="footer-social">
+			<a class="socialLink" href="https://www.theknot.com/marketplace/forever-amour-bridal-boutique-new-york-ny-546587" target="_blank">
+				<img id="knotIcon" src="Images/SocialMediaIcons/Knot_SocialIcon_transparent.png" alt="The Knot Icon" title="The Knot Wedding Network">
+			</a>
+
+			<a class="socialLink" href="https://www.facebook.com/ForeverAmourBridalDresses/" target="_blank">
+				<img id="fbIcon" src="Images/SocialMediaIcons/FB_SocialIcon_transparent.png" alt="Facebook Icon" title="Facebook">
+			</a>
+
+			<a class="socialLink" href="https://twitter.com/foreveramournyc" target="_blank">
+				<img id="twitterIcon" src="Images/SocialMediaIcons/Twitter_SocialIcon_transparent.png" alt="Twitter Icon" title="Twitter">
+			</a>
+
+			<a class="socialLink" href="https://www.pinterest.com/foreveramour/" target="_blank">
+				<img id="pinterestIcon" src="Images/SocialMediaIcons/Pinterest_SocialIcon_transparent.png" alt="Pinterest Icon" title="Pinterest">
+			</a>
+
+			<a class="socialLink" href="https://www.instagram.com/foreveramourbridalboutique/" target="_blank">
+				<img id="instagramIcon" src="Images/SocialMediaIcons/Instagram_SocialIcon_transparent.png" alt="Instagram Icon" title="Instagram">
+			</a>
+		</div>
+	</div>
+
+	<div id="footer-right">
+		<div id="contact">
+			<a href="contact.html">
+				Contact
+			</a>
+		</div>
+		<div class="contactInfo">
+			<span>Phone:</span>
+			<br>
+			212 - 486 -2900
+		</div>
+		<div class="contactInfo">
+			<span>Email:</span>
+			<br>
+			stylist@foreveramourbridal.com
+		</div>
+		<div class="contactInfo">
+			<span>Location:</span>
+			<br>
+			1089 Second Ave.<br>
+			Suite 2<br>
+			New York, NY 10022
+		</div>
+
+	</div>
+</footer>
+
+</body>
+
+</html>

@@ -25,16 +25,12 @@
 
 	<!--<link href="css/bootstrap.css" media="screen" rel="stylesheet" type="text/css">-->
 
-	<link href="CSS/prettyPhoto.css" media="screen" rel="stylesheet" type="text/css">
-
 	<!--<script src="JS/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>-->
     
     <script type="text/javascript" src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 	<script src="JS/jquery.js" type="text/javascript" charset="utf-8"></script>
 	  
-	<script src="JS/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
-
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 <!-- 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script> -->
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
@@ -324,17 +320,17 @@
 
 			<div ng-if="ctrl.clickedThumbNail == true" class="selectedImage">
 				<div class="closeDesignerImageGallery">
-					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
+					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">X</p>
 				</div>
 				<img ng-src="{{ctrl.selectedImage}}">
 				<div class="closeDesignerImageGallery">
-					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">Close</p>
+					<p ng-click="ctrl.closeDesignerImageGallerySelectedImage()">X</p>
 				</div>
 			</div>
 
 			<div id="viewImagesInGallery" ng-if="ctrl.imageToBeViewed == true">
 				<div class="closeDesignerImageGallery" ng-if="ctrl.clickedThumbNail == false">
-					<p ng-click="ctrl.closeDesignerImageGallery()">Close</p>
+					<p ng-click="ctrl.closeDesignerImageGallery()">X</p>
 				</div>
 				<div ng-repeat="images in ctrl.designerImages track by $index" class="designerImageGallery">
 						<p ng-bind="images.designerName"></p>
@@ -343,27 +339,8 @@
 				<div class="clear"></div>
 
 				<div>
-					<p>Current Page: <span ng-bind="ctrl.current_page"></span><span>/</span><span ng-bind="ctrl.numPages"></span></p>
+					<p>Current Page: <span ng-bind="ctrl.current_page"></span><span>/</span><span ng-bind="ctrl.numPages"></span><span ng-click="ctrl.prevPage(ctrl.currentDesigner, ctrl.mainCollection)" ng-if="ctrl.current_page > 1"> : < Previous </span><span ng-click="ctrl.nextPage(ctrl.currentDesigner, ctrl.mainCollection)" ng-if="ctrl.current_page < ctrl.numPages"> : Next > </span></p>
 				</div>
-				<div class="imgNavContainer">
-					<div ng-click="ctrl.prevPage(ctrl.currentDesigner)" ng-if="ctrl.current_page > 1">
-						<div class="imgNavButtons">
-							<p>Previous</p>
-						</div>
-					</div>
-					<div ng-repeat="pages in ctrl.displayPages" ng-if="ctrl.current_page < ctrl.numPages || ctrl.current_page == ctrl.numPages">
-						<div class="imgNavButtons float">
-							<p ng-bind="pages.pageNumber" ng-click="ctrl.numberPageClickTo(ctrl.currentDesigner, pages.pageNumber)"></p>
-						</div>
-					</div>
-					<div class="clear"></div>
-					<div ng-click="ctrl.nextPage(ctrl.currentDesigner)" ng-if="ctrl.current_page < ctrl.numPages">
-						<div class="imgNavButtons nextEnd" >
-							<p>Next</p>
-						</div>
-					</div>
-				</div>
-
 			</div>
 			<div class="listOfDesigner">
 				<div class="imgGals" ng-repeat="designer in ctrl.designerList.designerArray" ng-if="ctrl.mainHtml == true">
@@ -375,7 +352,7 @@
 					<div class="designerInfo designerInfoList text">
 						<h3 ng-bind="designer.name"></h3>
 						<p ng-bind="designer.description"></p>
-						<a href="#top" ng-click="ctrl.viewGallery(designer.name, ctrl.current_page)" >View Gallery</a>
+						<a href="#top" ng-click="ctrl.viewGallery(designer.name, ctrl.current_page, ctrl.mainCollection)" >View Gallery</a>
 					</div>
 					<div class="clear"></div>
 					<div class="bottomBorder"></div>

@@ -3,26 +3,15 @@
 
 angular.module('CollectionImageGallery', ['DesignerService'])
 
-.controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll, PaginateDesigner, CollectionArray, JudeArray) {
+.controller("CollectionImageGalleryController", function(DesignerListFactory, $location, $anchorScroll, PaginateDesigner) {
 
 	var self = this;
 	self.scrollTo = function(id) {
       $location.hash(id);
       $anchorScroll();
    	}
-   	self.setValueArrays = true;
-   	self.designerList;
-   	self.setArray = function(){
-		if(self.setValueArrays === true) {
-			self.designerList = new DesignerListFactory(CollectionArray);
-		} else {
-			self.designerList = new DesignerListFactory(JudeArray);
-		}
-	};
-	self.setArray();
-   	self.mainCollection = CollectionArray;
-   	self.justJude = JudeArray;
 	self.imageToBeViewed = false;
+	self.designerList = new DesignerListFactory();
 	self.designerFullImages;
 	self.designerImages;
 	self.mainHtml = true;
@@ -33,24 +22,15 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 	self.numPages;
 	self.displayPages;
 	self.currentDesigner;
-	self.viewGallery = function(designer, page, array) {
-
-		for( var i = 0; i < array.length; i++){
-			self.arrayName = array[i];
-			if(self.arrayName.name === "Jude Jowilson") {
-				self.setValueArrays = false;
-				designer = "Jude Jowilson";
-				self.designerList = new DesignerListFactory(JudeArray);
-			}
-		}
-		console.log(designer);
+	self.viewGallery = function(designer, page) {
 		self.designerFullImages = self.designerList.viewDesignerGallery(designer);
-		self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, page, array);
+		self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, page);
 		self.paged = page;
 		self.currentDesigner = designer;
 		self.numPages = Math.ceil(self.designerFullImages.length / self.records_per_page);
 		self.imageToBeViewed = true;
 		self.mainHtml = false;
+		self.displayPages = PaginateDesigner.PagesToBedisplayed(self.numPages);
 		self.scrollTo();
 
 	};
@@ -66,7 +46,6 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 		self.selectedImage = image;
 		self.imageToBeViewed = false;
 		self.clickedThumbNail = true;
-		self.scrollTo();
 	}
 	self.closeDesignerImageGallerySelectedImage = function() {
 		self.clickedThumbNail = false;
@@ -74,20 +53,20 @@ angular.module('CollectionImageGallery', ['DesignerService'])
 		self.scrollTo();
 	}
 
-	self.prevPage = function(designer, array) {
+	self.prevPage = function(designer) {
 		self.thisDesigner = designer;
 	    if (self.current_page > 1) {
 	        self.current_page--;
-	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page, array);
+	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
 	        self.scrollTo();
 	    }
 	}
 
-	self.nextPage = function(designer, array) {
+	self.nextPage = function(designer) {
 		self.thisDesigner = designer;
 	    if (self.current_page < self.numPages) {
 	        self.current_page++;
-	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page, array);
+	        self.designerImages = PaginateDesigner.PaginateDesignerFunction(designer, self.current_page);
 	        self.scrollTo();
 	    }
 	}

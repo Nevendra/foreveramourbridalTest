@@ -4,58 +4,14 @@
 angular.module('DesignerService', [])
 
 .factory('DesignerListFactory', function(){
-	function DesignerListFactory(array){
-		this.designerArray = array/// ends designer array
-	};/// ends designerlistFactory function()
-
-	DesignerListFactory.prototype.viewDesignerGallery = function(designer) {
-		console.log(this.designerArray);
-		for(var i = 0; i < this.designerArray.length; i++ ){
-			this.name = this.designerArray[i];
-			if(this.name.name === designer){
-				this.designGalleryArray = [];
-				this.nameGallery = this.name.gallery;
-				this.designGalleryArray = this.nameGallery;
-			}
-		}
-		return this.designGalleryArray;
-	};
-
-	return DesignerListFactory;
-})//// ends designerlistfactory
-
-.service('PaginateDesigner', function(DesignerListFactory){
-	var self = this;
-	self.PaginateDesignerFunction = function(designer, page, array){
-		console.log(designer);
-		console.log(page);
-		console.log(array);
-		self.designerPaginateArray = [];
-		self.designerList = new DesignerListFactory(array);
-		self.designerImages = self.designerList.viewDesignerGallery(designer, page);
-		self.records_per_page = 6;
-		for (var i = (page-1) * self.records_per_page; i < (page * self.records_per_page) && i < self.designerImages.length; i++) {
-			self.designerPaginateArray.push(self.designerImages[i]);
-    	}
-  		return self.designerPaginateArray;
-	}
-
-})
-
-.value('CollectionArray', [
+	function DesignerListFactory(){
+		this.designerArray = [
 			{
 				name: "Eddy K",
 				description: "Designed in Milan, the fashion capital of the world, and manufactured with the highest quality fabrics. Sophisticated couture gowns and elegant destination dresses are made with the highest attention to detail that flatters every figure, taste, and occasion.",
 				mainImage: "Images/Collection_large/AK160_full.jpg",
 				gallery: [
-					{
-						img: "Images/Collection_large/AK160_full.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/AK181_full.jpg",
-						designerName: "",
-					},
+
 					{
 						img: "Images/Collection_large/EddyK_1.jpg",
 						designerName: "",
@@ -72,6 +28,14 @@ angular.module('DesignerService', [])
 						img: "Images/Collection_large/EddyK_4-cropped.png",
 						designerName: "",
 					},					
+					{
+						img: "Images/Collection_large/EddyK_1.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/AK181_full.jpg",
+						designerName: "",
+					},
 					{
 						img: "Images/Collection_large/EK1084_back2.jpg",
 						designerName: "",
@@ -92,10 +56,7 @@ angular.module('DesignerService', [])
 				description: "One of America's and Europe's most influential producers of wedding fashions since 1949, blending contemporary style with classic details. Gowns that create a timeless romantic look with lavish lace, memorable details, and stunning silhouettes. If you love Grace Kelly, Audrey Hepburn, or Jackie Kennedy, these designs are perfect for you.",
 				mainImage: "Images/Collection_large/JustinAlexander_3.png",
 				gallery: [
-					{
-						img: "Images/Collection_large/JustinAlexander_3.png",
-						designerName: "",
-					},		
+
 					{
 						img: "Images/Collection_large/JustinAlexanderKnot23.jpg",
 						designerName: "",
@@ -132,7 +93,11 @@ angular.module('DesignerService', [])
 					{
 						img: "Images/Collection_large/JustinAlex3.jpeg",
 						designerName: "",
-					},			
+					},
+					{
+						img: "Images/Collection_large/JustinAlexander_3.png",
+						designerName: "",
+					},					
 					{
 						img: "Images/Collection_large/JustinAlexanderKnot14.jpg",
 						designerName: "",
@@ -214,16 +179,17 @@ angular.module('DesignerService', [])
 				description: "Nicole Spose has collections that speak of a fresh and young fashion, that dictate trends, while maintaining quality and tailoring. Exclusively at our salon in New York City",
 				mainImage: "Images/Collection_large/nicole-spose-NIAB17092.jpg",
 				gallery: [
-					{
-						img: "Images/Collection_large/nicole-spose-NIAB17092.jpg",
-						designerName: "",
-					},
+
 					{
 						img: "Images/Collection_large/nicole-spose-NIAB17052.jpg",
 						designerName: "",
 					},
 					{
 						img: "Images/Collection_large/nicole-spose-NIAB17064.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/nicole-spose-NIAB17092.jpg",
 						designerName: "",
 					},
 					{
@@ -261,20 +227,112 @@ angular.module('DesignerService', [])
 
 
 			},
+			{
+				name: "Jude Jowilson",
+				description: "Sophisticated, classic style, with a modern approach and exquisite attention to detail. Couture gowns hand-crafted in the USA, using the finest fabrics, delicate embroideries, intricate draping and dramatic silhouettes.",
+				mainImage: "Images/Collection_large/HUPX9531.jpg",
+				gallery: [
+					{
+						img: "Images/Collection_large/IMG_26581judej.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/IMG_41331judej.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/IMG_0267judej.JPG",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/ELIZABETH_edited.jpg",
+						designerName: "",
+					},					
+					{
+						img: "Images/Collection_large/NewJudeGowns/ELIZABETHback_edited.jpg",
+						designerName: "",
+					},					
+					{
+						img: "Images/Collection_large/NewJudeGowns/FLORENCE_edited.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/FLORENCEback_edited.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/FLORENCEchantillylacedetail_edited.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/GRACE_edited.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/GRACEback_edited.jpg",
+						designerName: "",
+					},
+										{
+						img: "Images/Collection_large/NewJudeGowns/GRETAback_edited.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/ZELDABACK.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/BETTE.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/BETTEBACK.jpg",
+						designerName: "",
+					},					
+					{
+						img: "Images/Collection_large/NewJudeGowns/judes photo -215.jpg",
+						designerName: "",
+					},					
+					{
+						img: "Images/Collection_large/NewJudeGowns/judes photo -229.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/judes photo -252.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/SOPHIA.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/NewJudeGowns/ZELDA.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/HUPX9455.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/HUPX9531.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/HUPX9730.jpg",
+						designerName: "",
+					},
+					{
+						img: "Images/Collection_large/look4back.jpg",
+						designerName: "",
+					},
+				]
 
+
+			},
 			{
 				name: "Rosa Clará",
 				description: "Starting out in Barcelona and opening one of the world's most prestigious bridalwear shows - Barecelona Bridal Week, this brand soon spread throughout Spain and the rest of the world. Today it still offers innovative designs created from the highest quality fabrics.",
 				mainImage: "Images/Collection_large/RosaClaraKnot39.jpg",
 				gallery: [
-					{
-						img: "Images/Collection_large/RosaClaraKnot39.jpg",
-						designerName: "Rosa Clará",
-					},
-					{
-						img: "Images/Collection_large/RosaClaraKnot40.jpg",
-						designerName: "Rosa Clará",
-					},
 					{
 						img: "Images/Collection_large/RosaClaraKnot29.jpg",
 						designerName: "Rosa Clará",
@@ -316,6 +374,14 @@ angular.module('DesignerService', [])
 						designerName: "Rosa Clará",
 					},
 					{
+						img: "Images/Collection_large/RosaClaraKnot39.jpg",
+						designerName: "Rosa Clará",
+					},
+					{
+						img: "Images/Collection_large/RosaClaraKnot40.jpg",
+						designerName: "Rosa Clará",
+					},
+					{
 						img: "Images/Collection_large/RosaClaraKnot41.jpg",
 						designerName: "Rosa Clará",
 					},
@@ -332,10 +398,7 @@ angular.module('DesignerService', [])
 				description: " View more selection and designer dresses at our salon in New York City",
 				mainImage: "Images/Collection_large/AlfredAngeloCinderellaPlatinum.jpg",
 				gallery: [
-					{
-						img: "Images/Collection_large/AlfredAngeloCinderellaPlatinum.jpg",
-						designerName: "Alfred Angelo",
-					},
+
 					{
 						img: "Images/Collection_large/glry-img2.jpg",
 						designerName: "La Sposa Felicidad",
@@ -366,6 +429,10 @@ angular.module('DesignerService', [])
 					},
 					{
 						img: "Images/Collection_large/Alfred Angelo 854.jpg",
+						designerName: "Alfred Angelo",
+					},
+					{
+						img: "Images/Collection_large/AlfredAngeloCinderellaPlatinum.jpg",
 						designerName: "Alfred Angelo",
 					},
 					{
@@ -422,109 +489,50 @@ angular.module('DesignerService', [])
 					},
 				]
 			}
-		])
+		]/// ends designer array
+	};/// ends designerlistFactory function()
 
-.value('JudeArray', [
-			{
-				name: "Jude Jowilson",
-				description: "Sophisticated, classic style, with a modern approach and exquisite attention to detail. Couture gowns hand-crafted in the USA, using the finest fabrics, delicate embroideries, intricate draping and dramatic silhouettes.",
-				mainImage: "Images/Collection_large/HUPX9531.jpg",
-				gallery: [
-					{
-						img: "Images/Collection_large/HUPX9531.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/HUPX9730.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/HUPX9455.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/ZELDABACK.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/BETTE.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/BETTEBACK.jpg",
-						designerName: "",
-					},					
-					{
-						img: "Images/Collection_large/NewJudeGowns/judes photo -215.jpg",
-						designerName: "",
-					},					
-					{
-						img: "Images/Collection_large/NewJudeGowns/judes photo -229.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/judes photo -252.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/SOPHIA.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/ZELDA.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/look4back.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/IMG_26581judej.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/IMG_41331judej.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/IMG_0267judej.JPG",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/ELIZABETH_edited.jpg",
-						designerName: "",
-					},					
-					{
-						img: "Images/Collection_large/NewJudeGowns/ELIZABETHback_edited.jpg",
-						designerName: "",
-					},					
-					{
-						img: "Images/Collection_large/NewJudeGowns/FLORENCE_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/FLORENCEback_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/FLORENCEchantillylacedetail_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/GRACE_edited.jpg",
-						designerName: "",
-					},
-					{
-						img: "Images/Collection_large/NewJudeGowns/GRACEback_edited.jpg",
-						designerName: "",
-					},
-										{
-						img: "Images/Collection_large/NewJudeGowns/GRETAback_edited.jpg",
-						designerName: "",
-					},
-				]
-			},
-		])
+	DesignerListFactory.prototype.viewDesignerGallery = function(designer) {
+		for(var i = 0; i < this.designerArray.length; i++ ){
+			this.name = this.designerArray[i];
+			if(this.name.name === designer){
+				this.designGalleryArray = [];
+				this.nameGallery = this.name.gallery;
+				this.designGalleryArray = this.nameGallery;
+			}
+		}
+		return this.designGalleryArray;
+	};
+
+	return DesignerListFactory;
+})//// ends designerlistfactory
+
+.service('PaginateDesigner', function(DesignerListFactory){
+	var self = this;
+	self.PaginateDesignerFunction = function(designer, page){
+		self.designerPaginateArray = [];
+		self.designerList = new DesignerListFactory();
+		self.designerImages = self.designerList.viewDesignerGallery(designer, page);
+		self.records_per_page = 6;
+		for (var i = (page-1) * self.records_per_page; i < (page * self.records_per_page) && i < self.designerImages.length; i++) {
+			self.designerPaginateArray.push(self.designerImages[i]);
+    	}
+  		return self.designerPaginateArray;
+	}
+	self.PagesToBedisplayed = function(pages) {
+		self.pagesArray = [];
+		for(var i = 1; i <= pages; i++) {
+			self.numPages =
+				{
+					pageNumber: i,
+				};
+			self.pagesArray.push(self.numPages);
+		}
+		return self.pagesArray;
+	}
+
+
+})
 
 })();
 
